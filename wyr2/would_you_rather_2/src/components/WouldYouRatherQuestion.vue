@@ -2,7 +2,7 @@
 
 <template>
     <div class="wyr">
-        <h2>Please make your choice!</h2>
+        <h2>Would you rather...</h2>
         <h3>{{ question }}</h3>
 
         <!-- creating radio buttons for the answers -->
@@ -22,7 +22,7 @@
 
 <script>
     export default {
-        name: 'WouldYouRather',
+        name: 'WouldYouRatherQuestion',
         // never modify a prop in a component
         props: {
             question: String,
@@ -46,19 +46,16 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    h3
-    {
-        margin: 40px 0 0;
-        padding-bottom: 15px;
-    }
+    h3 { margin: 40px 0 0; padding-bottom: 15px; }
 
     .wyr
     {
         border: 2px yellow solid;
-        background: cadetblue;
-        color: yellow;
+        background: burlywood;
+        color: indigo;
         margin: 20px;
         padding: 15px;
+        text-align: left;
     }
 
     label { padding-right: 15px; }
