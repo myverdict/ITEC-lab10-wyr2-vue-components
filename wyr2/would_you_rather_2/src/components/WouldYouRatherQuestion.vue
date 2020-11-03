@@ -24,12 +24,15 @@
     export default {
         name: 'WouldYouRatherQuestion',
         // never modify a prop in a component
+        // props is getting data from the parent App.vue through v-bind part in the App.vue
         props: {
+            id: Number,
             question: String,
             answer1: String,
             answer2: String,
         },
         // collect this data & this data is sent to the parent App.vue
+        // v-model in this file is connected to this part
         data() {
             return {
                 choice: ''          // initially no choice made
@@ -37,8 +40,8 @@
         },
         methods: {
             choiceMade() {
-                // send an event to the parent App.vue about the choice made
-                this.$emit('answer-changed', this.choice)
+                // send an event to the parent App.vue about the choice made and the question id
+                this.$emit('answer-changed', this.choice, this.id);
             }
         }
     }
